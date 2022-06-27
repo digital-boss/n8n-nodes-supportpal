@@ -179,7 +179,7 @@ export class Supportpal implements INodeType {
 		let endpoint = '';
 		let requestMethod = '';
 
-		let body: IDataObject = {};
+		const body: IDataObject = {};
 		let qs: IDataObject = {};
 		let responseData;
 
