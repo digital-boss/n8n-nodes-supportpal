@@ -7,6 +7,8 @@ import { IDataObject,
 	ILoadOptionsFunctions,
 	INodePropertyOptions,} from 'n8n-workflow';
 
+import { version } from '../version';
+
 import { supportpalApiRequest, simplify } from './GenericFunctions';
 import { usersDescription } from './UsersDescription';
 import { reportDescription } from './ReportDescription';
@@ -30,7 +32,7 @@ export class Supportpal implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Consume Supportpal REST API',
+		description: `Consume Supportpal REST API (v.${version})`,
 		defaults: {
 			name: 'Supportpal',
 		},
