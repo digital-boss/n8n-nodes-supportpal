@@ -319,21 +319,12 @@ export const ticketsDescription = [
 				description: 'Update the priority on the ticket.',
 			},
 			{
-				displayName: 'tag',
-				name: 'tag',
-				type: 'string',
-				default: '',
-				description:
-					'Filter by ticket tag, accepts a single ID or a comma delimited string e.g. 1,2,3.',
-			},
-			{
 				displayName: 'Subject',
 				name: 'subject',
 				type: 'string',
 				default: '',
 				description: 'Update the subject on the ticket.',
 			},
-
 			{
 				displayName: 'Tag IDs',
 				name: 'tag',
@@ -359,7 +350,7 @@ export const ticketsDescription = [
 				displayName: 'SLA Plan',
 				name: 'sla_plan',
 				type: 'number',
-				default: 0,
+				default: '',
 				description: 'Update the SLA plan on the ticket (will also update due time).',
 			},
 			{
@@ -368,6 +359,13 @@ export const ticketsDescription = [
 				type: 'number',
 				default: 0,
 				description: 'Manually set the due time on the ticket, set as a UNIX timestamp.',
+			},
+			{
+				displayName: 'Custom Field',
+				name: 'customfield',
+				type: 'json',
+				default: '',
+				description: 'An array of custom fields values, keyed by their ID (overwrites existing custom fields).',
 			},
 			{
 				displayName: 'CC',
